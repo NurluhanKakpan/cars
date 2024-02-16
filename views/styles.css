@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px; /* Increased width */
+    padding: 40px; /* Increased padding */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Add margin between title and nav */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px; /* Increased font size */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Align items in the center */
+    flex-wrap: wrap; /* Allow wrapping of buttons */
+}
+
+nav a {
+    color: #fff; /* Change text color to white */
+    text-decoration: none;
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #4CAF50; /* Green background color */
+    transition: background-color 0.3s ease;
+    margin: 0 10px 20px; /* Add margin between buttons */
+    font-size: 18px; /* Increase font size for larger buttons */
+}
+
+nav a:hover {
+    background-color: #2E8B57; /* Darker green on hover */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust spacing */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}

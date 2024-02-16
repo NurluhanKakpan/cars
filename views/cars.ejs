@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Model Search</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-bar {
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .car {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .car h2 {
+            margin-top: 0;
+        }
+
+        .car-details {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Search bar -->
+<div class="search-bar">
+    <form action="/cars" method="GET">
+        <label for="search">Search Car Model:</label>
+        <input type="text" id="search" name="search" placeholder="Enter a car model...">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<% cars.forEach(function(car) { %>
+    <div class="car">
+        <h2><%= car.make %> <%= car.model %> (<%= car.year %>)</h2>
+        <div class="car-details">
+            <div>
+                <p><strong>Class:</strong> <%= car.class %></p>
+                <p><strong>Drive:</strong> <%= car.drive %></p>
+                <p><strong>Fuel Type:</strong> <%= car.fuel_type %></p>
+            </div>
+            <div>
+                <p><strong>Transmission:</strong> <%= car.transmission %></p>
+                <p><strong>Cylinders:</strong> <%= car.cylinders %></p>
+                <p><strong>Displacement:</strong> <%= car.displacement %>L</p>
+            </div>
+            <div>
+                <p><strong>City MPG:</strong> <%= car.city_mpg %></p>
+                <p><strong>Highway MPG:</strong> <%= car.highway_mpg %></p>
+                <p><strong>Combination MPG:</strong> <%= car.combination_mpg %></p>
+            </div>
+        </div>
+    </div>
+<% }); %>
+</body>
+
+</html>

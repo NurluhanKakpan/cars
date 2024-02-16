@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffffff, #ffffff);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px; /* Increased width */
+            padding: 10px; /* Increased padding */
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            animation: fadeIn 0.5s ease-in-out;
+            text-align: center; /* Center text */
+            margin-bottom: 10px; /* Add margin between title and nav */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 90px; /* Increased font size */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* Align items in the center */
+            flex-wrap: wrap; /* Allow wrapping of buttons */
+        }
+
+        nav a {
+            position: relative;
+            background: #299b6b;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: none;
+            letter-spacing: 0.1rem;
+            font-size: 1rem;
+            padding: 1rem 3rem;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            letter-spacing: 0.2rem;
+            padding: 1.1rem 3.1rem;
+            background: var(--clr);
+            color: var(--clr);
+            /* box-shadow: 0 0 35px var(--clr); */
+            animation: box 3s infinite;
+        }
+
+
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 56px; /* Adjust spacing */
+        }
+
+        .image-container img {
+            max-width: 600px; /* Set maximum width for the image */
+            max-height: 600px; /* Set maximum height for the image */
+            width: auto; /* Allow image to scale with max-width */
+            height: auto; /* Allow image to scale with max-height */
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>HOME PAGE</h1>
+</div>
+<nav>
+    <a href="/login">Login Page</a>
+    <a href="/aircraft">Search Aircrafts</a>
+    <a href="/signup">Signup Page</a>
+    <a href="/cars">Search Cars</a>
+    <% if (user && user.isAdmin) { %>
+        <a href="/admin">Admin Page</a>
+    <% } %>
+</nav>
+<div class="image-container">
+    <img src="../images/tesla.jpg">
+</div>
+</body>
+</html>
+

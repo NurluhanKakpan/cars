@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4CAF50, #2E8B57);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 500px; /* Increased width */
+            padding: 40px; /* Increased padding */
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"], button {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #b9b9b9;
+            box-sizing: border-box;
+            font-size: 18px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding-left: 40px; /* Added padding for the icon */
+        }
+
+        input[type="text"]::placeholder, input[type="password"]::placeholder {
+            color: #999; /* Added placeholder color */
+        }
+
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #2E8B57;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p a {
+            color: #8d8d8d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        p a:hover {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Signup</h1>
+    <form action="/signup" method="post">
+        <label for="username"><i class="fa fa-user"></i> Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password"><i class="fa fa-lock"></i> Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Signup</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</div>
+</body>
+</html>
